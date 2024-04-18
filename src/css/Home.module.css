@@ -4,9 +4,11 @@
 }
 
 .button-container {
-    display: inline-flex;
+    display: flex;
     gap: 20px;
     margin-top: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .button {
@@ -15,8 +17,8 @@
     width: 200px;
     height: 50px;
     font-size: 16px;
-    background-color: #007bff;
-    color: #fff;
+    background-color: var(--clr-pink);
+    color: var(--clr-white);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -26,5 +28,5 @@
 
 
 .button:hover {
-    background-color: #00b339;
+    background-color: var(--clr-red-special);
 }
