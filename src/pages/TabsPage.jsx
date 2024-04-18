@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { FaAngleDoubleRight } from "react-icons/fa";
-import "../css/Tabs.css";
+import styles from "../css/Tabs.module.css";
 
 const url = "https://course-api.com/react-tabs-project";
 function TabsPage() {
@@ -28,27 +28,27 @@ function TabsPage() {
   }, []);
   if (loading) {
     return (
-      <section className="section loading">
+      <section className={`${styles["section"]} ${styles["loading"]}`}>
         <h1>Loading...</h1>
       </section>
     );
   }
   const { company, dates, duties, title } = jobs[value];
   return (
-    <section className="section">
-      <div className="title">
+    <section className={styles["section"]}>
+      <div className={styles["title"]}>
         <h2>experience</h2>
-        <div className="underline"></div>
+        <div className={styles["underline"]}></div>
       </div>
-      <div className="jobs-center">
+      <div className={styles["jobs-center"]}>
         {/* btn container */}
-        <div className="btn-container">
+        <div className={styles["btn-container"]}>
           {jobs.map((item, index) => {
             return (
               <button
                 key={item.id}
                 onClick={() => setValue(index)}
-                className={`job-btn ${index === value && "active-btn"}`}
+                className={`${styles["job-btn"]} ${index === value && styles["active-btn"]}`}
               >
                 {item.company}
               </button>
@@ -56,21 +56,21 @@ function TabsPage() {
           })}
         </div>
         {/* job info */}
-        <article className="job-info">
+        <article className={styles["job-info"]}>
           <h3>{title}</h3>
           <h4>{company}</h4>
-          <p className="job-date">{dates}</p>
+          <p className={styles["job-date"]}>{dates}</p>
           {duties.map((duty, index) => {
             return (
-              <div key={index} className="job-desc">
-                <FaAngleDoubleRight className="job-icon"></FaAngleDoubleRight>
+              <div key={index} className={styles["job-desc"]}>
+                <FaAngleDoubleRight className={styles["job-icon"]}></FaAngleDoubleRight>
                 <p>{duty}</p>
               </div>
             );
           })}
         </article>
       </div>
-      <button type="button" className="btn">
+      <button type="button" className={styles["btn"]}>
         more info
       </button>
     </section>

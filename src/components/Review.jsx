@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import reviewsData from '../data/ReviewData';
 import { FaChevronLeft, FaChevronRight, FaQuoteRight } from 'react-icons/fa';
+import styles from "../css/Reviews.module.css";
 const Review = () => {
   const [index, setIndex] = useState(0);
   const { name, job, image, text } = reviewsData[index];
@@ -34,25 +35,25 @@ const Review = () => {
   };
 
   return (
-    <article className='review'>
-      <div className='img-container'>
-        <img src={image} alt={name} className='person-img' />
-        <span className='quote-icon'>
+    <article className={styles['review']}>
+      <div className={styles['img-container']}>
+        <img src={image} alt={name} className={styles['person-img']} />
+        <span className={styles['quote-icon']}>
           <FaQuoteRight />
         </span>
       </div>
-      <h4 className='author'>{name}</h4>
-      <p className='job'>{job}</p>
-      <p className='info'>{text}</p>
-      <div className='button-container'>
-        <button className='prev-btn' onClick={prevPerson}>
+      <h4 className={styles['author']}>{name}</h4>
+      <p className={styles['job']}>{job}</p>
+      <p className={styles['info']}>{text}</p>
+      <div className={styles['button-container']}>
+        <button className={styles['prev-btn']} onClick={prevPerson}>
           <FaChevronLeft />
         </button>
-        <button className='next-btn' onClick={nextPerson}>
+        <button className={styles['next-btn']} onClick={nextPerson}>
           <FaChevronRight />
         </button>
       </div>
-      <button className='random-btn' onClick={randomPerson}>
+      <button className={styles['random-btn']} onClick={randomPerson}>
         surprise me
       </button>
     </article>

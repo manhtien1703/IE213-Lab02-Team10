@@ -1,28 +1,28 @@
 import { Link } from "react-router-dom";
-import "../css/Home.css";
+import styles from "../css/Home.module.css";
 
 function HomePage() {
   return (
-    <div className="container">
+    <div className={styles["container"]}>
       <h1>Trang Home</h1>
-      <div className="button-container">
+      <div className={styles["button-container"]}>
         <Link to="/birthday-reiminder">
-          <button>Birthday reminder</button>
+          <div className={styles["button"]}>Birthday reminder</div>
         </Link>
         <Link to="/tours">
-          <button>Tours</button>
+          <div className={styles["button"]}>Tours</div>
         </Link>
         <Link to="/reviews">
-          <button>Reviews</button>
+          <div className={styles["button"]}>Reviews</div>
         </Link>
         <Link to="/accordion">
-          <button>Accordion</button>
+          <div className={styles["button"]}>Accordion</div>
         </Link>
         <Link to="/menu">
-          <button>Menu</button>
+          <div className={styles["button"]}>Menu</div>
         </Link>
         <Link to="/tabs">
-          <button>Tabs</button>
+          <div className={styles["button"]}>Tabs</div>
         </Link>
       </div>
     </div>

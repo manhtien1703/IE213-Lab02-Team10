@@ -2,7 +2,7 @@ import { useState } from "react";
 import Menu from "../components/Menu";
 import Categories from "../components/Categories";
 import menuData from "../data/MenuData";
-import "../css/Menu.css";
+import styles from "../css/Menu.module.css";
 
 const allCategories = ["all", ...new Set(menuData.map((item) => item.category))];
 
@@ -21,10 +21,10 @@ function MenuPage() {
 
   return (
     <main>
-      <section className="menu section">
-        <div className="title">
+      <section className={`${styles["section"]} ${styles["menu"]}`}>
+        <div className={styles["title"]}>
           <h2>our menu</h2>
-          <div className="underline"></div>
+          <div className={styles["underline"]}></div>
         </div>
         <Categories categories={categories} filterItems={filterItems} />
         <Menu items={menuItems} />

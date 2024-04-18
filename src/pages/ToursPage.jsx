@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "../css/Tours.css";
+import styles from "../css/Tours.module.css";
 import Loading from "../components/Loading";
 import Tours from "../components/Tours";
 
@@ -34,27 +34,28 @@ function ToursPage() {
   }, []);
   if (loading) {
     return (
-      <main>
-        <Loading />
-      </main>
+        <div className={styles["main"]}>
+          <Loading />
+        </div>
     );
   }
+  console.log(styles);
   if (tours.length === 0) {
     return (
-      <main>
-        <div className="title">
-          <h2>no tours left</h2>
-          <button className="btn" onClick={() => fetchTours()}>
-            refresh
-          </button>
+        <div className={styles["main"]}>
+          <div className={styles["title"]}>
+            <h2>no tours left</h2>
+            <button className={styles["btn"]} onClick={() => fetchTours()}>
+              refresh
+            </button>
+          </div>
         </div>
-      </main>
     );
   }
   return (
-    <main>
-      <Tours tours={tours} removeTour={removeTour} />
-    </main>
+      <div className={styles["main"]}>
+        <Tours tours={tours} removeTour={removeTour} />
+      </div>
   );
 }
 

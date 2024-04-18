@@ -1,0 +1,35 @@
+:root {
+    --clr-primary-1-reviews: hsl(205, 86%, 17%);
+    --clr-primary-1-tabs: hsl(184, 91%, 17%);
+    --clr-primary-5-tabs: 	hsl(185, 62%, 45%);
+    --clr-primary-5: hsl(205, 78%, 60%);
+    --clr-primary-7: #13795b;
+    --clr-primary-8: #0d503c;
+    --clr-primary-9: #06281e;
+    --clr-primary-10: hsl(205, 100%, 96%);
+    --clr-primary-10-tabs: hsl(186, 100%, 94%);
+    --clr-grey-1: hsl(209, 61%, 16%);
+    --clr-grey-3: hsl(209, 34%, 30%);
+    --clr-grey-5: hsl(210, 22%, 49%);
+    --clr-grey-9: hsl(209, 61%, 16%);
+    --clr-grey-10: hsl(210, 36%, 96%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-purple: hsl(286, 64%, 22%);
+    --clr-red-special: hsl(341, 55%, 45%);
+    --clr-grey-special: hsl(288, 11%, 91%);
+    --clr-gold: hsl(36, 47%, 57%);
+    --clr-red-dark: hsl(360, 67%, 44%);
+    --clr-green-light: hsl(125, 71%, 66%);
+    --clr-black: hsl(0, 0%, 13%);
+    --clr-pink: hsl(337, 80%, 75%);
+    --transition: all 0.3s linear;
+    --spacing: 0.1rem;
+    --radius: 0.25rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --dark-shadow-birthday: 0 5px 15px rgba(0, 0, 0, 0.4);
+    --max-width: 1170px;
+    --fixed-width-birthday: 450px;
+    --fixed-width-accordion: 920px;
+    --fixed-width: 620px;
+}

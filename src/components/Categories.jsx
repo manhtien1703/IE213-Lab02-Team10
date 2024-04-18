@@ -1,11 +1,12 @@
+import styles from "../css/Menu.module.css";
 const Categories = ({ categories, filterItems }) => {
   return (
-    <div className="btn-container">
+    <div className={styles["btn-container"]}>
       {categories.map((category, index) => {
         return (
           <button
             type="button"
-            className="filter-btn"
+            className={styles["filter-btn"]}
             key={index}
             onClick={() => filterItems(category)}
           >

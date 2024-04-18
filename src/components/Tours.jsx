@@ -1,10 +1,11 @@
+import styles from "../css/Tours.module.css";
 import Tour from "./Tour";
 const Tours = ({ tours, removeTour }) => {
   return (
     <section>
-      <div className="title">
+      <div className={styles["title"]}>
         <h2>our tours</h2>
-        <div className="underline"></div>
+        <div className={styles["underline"]}></div>
       </div>
       <div>
         {tours.map((tour, index) => {
